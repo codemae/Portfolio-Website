@@ -51,18 +51,33 @@ h3 {
 	color: #ff9882;
 }
 
+.grid {
+  background-color: #ff9882;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 
-#content {
-	width: 100%;
-	margin: 0 auto;
+/* ---- grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+	width: 240px;
 }
 
 .grid-item {
 	display: block;
- 	float: left;
-	width: 290px;
-	margin: 0 0 10px 0;
+	float: left;
+	height: auto;
+	width: 240px;
+	background-color: #e00380;
+	border: 2px solid #ff9882;
 	-webkit-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
 	-moz-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
 	-ms-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
@@ -71,9 +86,53 @@ h3 {
 }
 
 .grid-item img {
-	width: 290px;
+	width: 240px;
 	height: auto;
 }
+
+/* .grid-item--height2 { height: 195px; width: 240px; }
+.grid-item--height3 { height: 260px; width: 240px; }
+
+.grid-item--height2 .references-box .references-box-caption .references-box-caption-content { top: 75%; }
+.grid-item--height3 .references-box .references-box-caption .references-box-caption-content { top: 100%; } */
+
+/*Media Queries*/
+@media only screen and (max-width : 1199px),
+only screen and (max-device-width : 1199px){
+ #container {
+ width: 1000px;
+ }
+}
+ 
+@media only screen and (max-width : 999px),
+only screen and (max-device-width : 999px){
+ #container {
+ width: 800px;
+ }
+}
+ 
+@media only screen and (max-width : 799px),
+only screen and (max-device-width : 799px){
+ #container {
+ width: 600px;
+ }
+}
+ 
+@media only screen and (max-width : 599px),
+only screen and (max-device-width : 599px){
+ #container {
+ width: 400px;
+ }
+}
+ 
+@media only screen and (max-width : 399px),
+only screen and (max-device-width : 399px){
+ #container {
+ width: 200px;
+ }
+} */
+
+
 
 .section-heading{
 	color: #e00380;
@@ -475,7 +534,7 @@ header .header-content .header-content-inner p {
 .references-box .references-box-caption .references-box-caption-content .person-name,
 .references-box .references-box-caption .references-box-caption-content .person-text .alt,
 .references-box .references-box-caption .references-box-caption-content .person-name .alt  {
-    /* padding: 0 15px; */
+    padding: 0 15px;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }
 
